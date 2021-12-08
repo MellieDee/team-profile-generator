@@ -15,9 +15,7 @@ const Intern = require('./lib/Intern');
 // after each set push to team array using the constructor
 // if the user is done, run writefile function using the team array
 
-
-
-
+// define employee array to hold all Team members
 empArr = []
 
 
@@ -93,7 +91,6 @@ const managerPrompt = () => {
       console.log(empArr);
     })
 };
-
 //  ********* MANAGER ENDS ************/
 
 
@@ -189,7 +186,7 @@ const teamInfoPrompt = () => {
         }
       },
 
-      //** FINISH */
+      //** Exit */
       //  ** Build HTML **
       // {
       //   type: 'input',
@@ -218,22 +215,27 @@ const teamInfoPrompt = () => {
     .then(teamData => {
       const { name, id, email, role, gitHubName, school } = teamData;
 
+      // check to see what role, then determine what Class to use
       if (role === 'Engineer') {
 
         const engineer = new Engineer(name, id, email, gitHubName);
 
+        // push Engineer into the array
         empArr.push(engineer);
         console.log(empArr + "Eng");
       }
 
-      else { (role === 'intern') 
+      else {
+        (role === 'intern')
         const intern = new Intern(name, id, email, school);
 
+        // push intern into the array
         empArr.push(intern);
         console.log(empArr + "Intern");
 
-      } 
+      }
 
+      // determine whether or not new employee is desired
       if (teamData.confirmAddTeam) {
         return teamInfoPrompt(teamData);
       } else {
@@ -244,18 +246,11 @@ const teamInfoPrompt = () => {
 };
 
 
-// const manager = new Manager(parameters)
-// employeeArray.push(manager)
-// if (data.getRole() = "Manager")
-// after the prompt determing employee type
-// push that into the array
-// determine whether or not new employee is desired
-// do whatever
 
 
 //  ** Running the app
 managerPrompt()
-.then(teamInfoPrompt)
+  .then(teamInfoPrompt)
   .then(empArr => {
     console.log(empArr);
 

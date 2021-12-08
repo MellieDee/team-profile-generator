@@ -10,4 +10,3 @@ https://css-tricks.com/radial-gradient-recipes/
 
 https://www.geeksforgeeks.org/how-to-place-two-bootstrap-cards-next-to-each-other/
 
-https://github.com/nicolewallace09/team-profile-generator/blob/master/index.js
