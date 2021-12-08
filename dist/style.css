@@ -1,0 +1,38 @@
+:root {
+  --primary-color: #5db5f0;
+  --secondary-color: #284b85;
+  --tertiary-color: #f5efc4; 
+}
+
+
+/*   RESET DEFAULT BROWSER STYLES   */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+/*   RESET DEFAULT BROWSER STYLES Ends   */
+
+body {
+  /* font-family: 'Open Sans', sans-serif;
+  background-image: url('../images/skyBg.png'); */
+  /* background-position: 100%;
+  background-attachment:fixed; */
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  overflow-x: hidden;
+  line-height: 1;
+  background-color: var(--primary-color);
+  ; 
+  color: blue;
+  height: 100vh;
+  width: 100%;
+}
+
+h1 {
+  background-color: var(--tertiary-color);
+  width: 100%;
+}
+
