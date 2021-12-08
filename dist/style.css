@@ -1,7 +1,12 @@
 :root {
-  --primary-color: #5db5f0;
-  --secondary-color: #284b85;
-  --tertiary-color: #f5efc4; 
+ --first-color: #b54741;
+  --second-color: #3b69b3; 
+  --third-color: #992f36; 
+  --fourth-color:#9a67b5; 
+  --fifth-color: #0a1761; 
+  --sixth-color: #f8b500;
+  --seventh-color: #fceabb;
+
 }
 
 
@@ -14,25 +19,124 @@
 }
 /*   RESET DEFAULT BROWSER STYLES Ends   */
 
+
+html{
+  height: 100%;
+}
+
 body {
   /* font-family: 'Open Sans', sans-serif;
   background-image: url('../images/skyBg.png'); */
   /* background-position: 100%;
   background-attachment:fixed; */
+  position: relative;
+  padding-bottom: 1em;
   background-size: cover;
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   overflow-x: hidden;
   line-height: 1;
-  background-color: var(--primary-color);
-  ; 
-  color: blue;
-  height: 100vh;
+  background-color: #d99584;
+  /* background-color: black; */
+  color: white;
+  min-height: 100%;
   width: 100%;
 }
 
-h1 {
-  background-color: var(--tertiary-color);
-  width: 100%;
+.body-gradient {
+  background: radial-gradient(at bottom right, #d99584, #f8b500);
+  background-repeat: no-repeat;
 }
+
+
+header {
+  background-color: black;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  color: white;
+  z-index: 9999;
+  /* background-image: linear-gradient(#962129, #e8bd5f); */
+  /* position: -webkit-sticky;
+  position: sticky;
+  top: 0; */
+  margin: 0;
+  width: 100%;
+  position: relative;
+  background: radial-gradient(at left, #666, black)
+}
+
+body header div h1 {
+  flex: 6;
+  margin: 0;
+  padding: 0;
+  font-size: 4em;
+
+}
+
+body header div i {
+flex: 0;
+margin: 0;
+padding: 0;
+
+}
+
+.card-deck {
+  margin: 2em 0 2em 0;
+}
+
+footer {
+  background-image: linear-gradient(black, var(--fifth-color));
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+}
+footer h3 {
+  padding: 0.3em;
+  font-size: 1.3em;
+}
+
+
+.card, .card-header {
+  background-color: var(--fifth-color);
+  color: white;
+}
+
+#header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+ .card-body {
+  background-color: var(--second-color); 
+  /* background-image: linear-gradient(var(--second-color),  var(--fifth-color)); */
+}
+
+.far {
+  font-size: 3em;
+
+}
+
+
+
+
+
+  /*** MQ FOR SMALLER/MEDIUM SCREENS  and LARGER TABLETS,  LAPTOPS  DESKTOPS  ***/
+  @media screen and (min-width: 576px) {
+
+  body {
+    font-size: 16px;
+    }
+  }
+
+
+  /*   Media Queries medium screens & tablets */
+ @media screen and (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+
+
 
