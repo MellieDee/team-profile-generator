@@ -30,14 +30,14 @@ body {
   /* background-position: 100%;
   background-attachment:fixed; */
   position: relative;
-  padding-bottom: 1em;
+  padding-bottom: 1.5em;
   background-size: cover;
   /* font-family: 'Roboto', sans-serif; */
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   overflow-x: hidden;
   line-height: 1;
-  background-color: #d99584;
+  /* background-color: #d99584; */
   /* background-color: black; */
   color: white;
   min-height: 100%;
@@ -45,8 +45,7 @@ body {
 }
 
 .body-gradient {
-  background: radial-gradient(at bottom right, #d99584, #f8b500);
-  background-repeat: no-repeat;
+  background: linear-gradient(to left, #d99584, var(--sixth-color)) ;
 }
 
 
@@ -66,39 +65,9 @@ header {
   background: radial-gradient(at left, #666, black)
 }
 
-body header div h1 {
-  flex: 6;
-  margin: 0;
-  padding: 0;
-  font-size: 4em;
-
-}
-
-body header div i {
-flex: 0;
-margin: 0;
-padding: 0;
-
-}
-
-.card-deck {
-  margin: 2em 0 2em 0;
-}
-
-footer {
-  background-image: linear-gradient(black, var(--fifth-color));
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-}
-footer h3 {
-  padding: 0.3em;
-  font-size: 1.3em;
-}
-
-
-.card, .card-header {
-  background-color: var(--fifth-color);
-  color: white;
+/**  Header Styling **/
+.far {
+  font-size: 3em;
 }
 
 #header {
@@ -107,35 +76,100 @@ footer h3 {
   align-items: center;
 }
 
- .card-body {
+body header div h1 {
+  flex: 6;
+  margin: 0;
+  padding: 0;
+  font-size: 3.8em;
+
+}
+body header div i {
+flex: 0;
+margin: 0;
+padding: 0;
+
+}
+
+
+/** Card Styling **/
+.card-deck {
+  margin: 1.8em;
+}
+
+.card {
+  background-color: var(--fifth-color);
+  color: white;
+  margin-top: 1em;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.card-header{
+  background-color: var(--fifth-color);
+  color: white;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 1.8em;
+}
+
+.card-subhead {
+  font-size: 1.5em;
+}
+
+.card-body {
   background-color: var(--second-color); 
   /* background-image: linear-gradient(var(--second-color),  var(--fifth-color)); */
 }
 
-.far {
-  font-size: 3em;
+ul {
+  list-style-type: none;
 
 }
 
 
 
+
+
+footer {
+  background: linear-gradient(black, var(--fifth-color));
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+}
+footer h4 {
+  padding: 1em;
+  font-size: 0.9em;
+}
 
 
   /*** MQ FOR SMALLER/MEDIUM SCREENS  and LARGER TABLETS,  LAPTOPS  DESKTOPS  ***/
   @media screen and (min-width: 576px) {
 
   body {
-    font-size: 16px;
+    font-size: 14px;
     }
+  
+  .body-gradient {
+    background: radial-gradient(at bottom right, #d99584, #f8b500);
   }
 
+  .card-title {
+    font-weight: bold;
+    font-size: 1.4em;
+  }
+  
+  .card-subhead {
+    font-size: 1.2em;
+  }
+
+  }
 
   /*   Media Queries medium screens & tablets */
- @media screen and (min-width: 768px) {
+ /* @media screen and (min-width: 768px) {
   body {
     font-size: 18px;
   }
-}
+} */
 
 
 
