@@ -14,15 +14,9 @@ test("Set name via constructor arguments", () => {
   expect(eng.name).toBe(name);
 });
 
-// test("Set gitHubName via constructor arguments", () => {
-//   const gitHubName = "gitHubEileen";
-//   const eng = new Engineer(gitHubName);
-//   expect(eng.gitHubName).toBe(gitHubName);
-//   console.log(gitHubName)
-// });
 
 test("Can get gitHub via getGitHubName()", () => {
-  const gitHubName = "melliedee";
+  const gitHubName = this.gitHubName;
   const eng = new Engineer(gitHubName);
   expect(eng.getGitHubName()).toBe(gitHubName);
   console.log(gitHubName)
@@ -31,7 +25,7 @@ test("Can get gitHub via getGitHubName()", () => {
 
 
 test("getRole() should return \"Engineer\"", () => {
-  const role = "EngFromJs";
+  const role = "Engineer";
   const eng = new Engineer("Eileen");
   expect(eng.getRole()).toBe(role);
   console.log(role);

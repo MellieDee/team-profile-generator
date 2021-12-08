@@ -8,23 +8,23 @@
 // `;
 // };
 
-// function generateRole(data) {
-//   switch(data.role) {
-//     case 'Manager':
-//       return `
-//       <h3 class="card-subhead" id="role">Manager</h3>
-//       `
+function generateRole(empArr) {
+  switch(getRole()) {
+    case 'Manager':
+      return `
+      <h3 class="card-subhead" id="role">Manager</h3>
+      `
 
-//     case 'Engineer':
-//       return `
-//       <h3 class="card-subhead" id="role">Engineer</h3>
-//       `
-//     case 'Intern':
-//     return `
-//     <h3 class="card-subhead" id="role">Intern</h3>
-//     `
-//   }
-// }
+    case 'Engineer':
+      return `
+      <h3 class="card-subhead" id="role">Engineer</h3>
+      `
+    case 'Intern':
+    return `
+    <h3 class="card-subhead" id="role">Intern</h3>
+    `
+  }
+}
 // const Engineer = require('./lib/Engineer.js');
 
 
@@ -72,7 +72,8 @@ const generateCards= (name, role, email) => {
 //   // destructure page data by section
 //   const { projects, about, ...header } = templateData;
 
-const generateHtmlTemp = (data) => {
+const generateHtmlTemp = () => {
+  const { name, id, email, role} = data
   return `
   <!DOCTYPE html>
   <html lang="en">
@@ -115,7 +116,7 @@ const generateHtmlTemp = (data) => {
     </header>
 
 
-${generateCards(data)}
+${generateCards(name, role, email)}
 
 
 

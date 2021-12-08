@@ -1,4 +1,4 @@
-const Manager = require('../lib/Engineer');
+const Manager = require('../lib/Manager');
 jest.mock('../lib/Employee');
 
 
@@ -18,7 +18,7 @@ test("Set office via constructor arguments", () => {
 const office = "Office 222";
 const man = new Manager(office);
 expect(man.office).toBe(office);
-console.log(man)
+console.log(office)
 });
 
 
