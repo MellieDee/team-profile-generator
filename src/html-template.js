@@ -1,79 +1,77 @@
-//create special list item
-// const generateProjectUrl = projectUrl => {
-//   if (!projectUrl) {
-//   return 'Does not have a deployment URL.'
-//   }
-//   return `
-// ${projectUrl}
-// `;
-// };
+function generateRole(employee) {
 
-function generateRole(empArr) {
-  switch(getRole()) {
+  switch (employee.getRole()) {
     case 'Manager':
       return `
-      <h3 class="card-subhead" id="role">Manager</h3>
-      `
-
-    case 'Engineer':
-      return `
-      <h3 class="card-subhead" id="role">Engineer</h3>
-      `
-    case 'Intern':
-    return `
-    <h3 class="card-subhead" id="role">Intern</h3>
-    `
-  }
-}
-// const Engineer = require('./lib/Engineer.js');
-
-
-const generateGitHubName = gitHubName => {
-  if (!gitHubName) {
-    return '';
-  }
-  return `
-  <li class="list-group-item team-properties" id="github">
-  <a href='https://github.com/${data.githubName.replace(/ /g, "")}' class="link" target="_blank">${data.gitHubName}</li>
-  `
-}
-
-// create cards
-const generateCards= (name, role, email) => {
-  if (name, role, email) {
-
-  return `
-  <div class="card-deck">
 
   <div class="card m-1">
     <div class="card-block">
 
       <div class="card-header text-center">
-        <h2 class="card-title" id="name">${data.name}</h2>
-        ${generateRole(data.role)}
+        <h2 class="card-title" id="name">${employee.name}</h2>
+        <h3 class="card-subhead" id = "role">Manager</h3>
       </div>
 
       <ul class="list-group list-group-flush card-list">
-        <li class="list-group-item team-properties text-left" id="emp-id">${data.id}</li>
-        <li class="list-group-item  team-properties" id="email">${data.email}</li>
-      ${generateGitHubName(data.gitHubName)}
+       <li class="list-group-item team-properties text-left" id="emp-id">ID: ${employee.id}</li>
+       <li class="list-group-item  team-properties" id="email">eMail: ${employee.email}</li>
+       <li class="list-group-item  team-properties" id="office">Office: ${employee.office}</li>
       </ul>
-    </div>
 
   </div>
-</div>
+ </div>
   `;
-};
+
+
+    case 'Engineer':
+      let gitHubLink = 'https://github.com/${employee.githubName.replace(/ /g, "")}'
+      return `
+
+  <div class="card m-1">
+    <div class="card-block">
+    
+      <div class="card-header text-center">
+        <h2 class="card-title" id="name">${employee.name}</h2>
+        <h3 class="card-subhead" id = "role">Engineer</h3>
+      </div>
+    
+      <ul class="list-group list-group-flush card-list">
+        <li class="list-group-item team-properties text-left" id="emp-id">ID: ${employee.id}</li>
+        <li class="list-group-item  team-properties" id="email">eMail: ${employee.email}</li>
+        <li class="list-group-item  team-properties" id="gitHub">GitHub:<a href="https://github.com/${employee.githubName.replace(/ /g, "")}" class="card-link">${employee.gitHubName}</a></li>
+      </ul>
+    
+    </div>
+  </div>
+      `;
+
+    case 'Intern':
+       return `
+
+  <div class="card m-1">
+    <div class="card-block">
+    
+      <div class="card-header text-center">
+        <h2 class="card-title" id="name">${employee.name}</h2>
+        <h3 class="card-subhead" id = "role">Intern</h3>
+      </div>
+    
+      <ul class="list-group list-group-flush card-list">
+        <li class="list-group-item team-properties text-left" id="emp-id">ID: ${employee.id}</li>
+        <li class="list-group-item  team-properties" id="email">eMail: ${employee.email}</li>
+        <li class="list-group-item  team-properties" id="school">School: ${employee.school}</li>
+      </ul>
+    
+    </div>
+  </div>
+      `;
+  };
 }
 
-// export function to generate entire page
-//from portfolio sample
-// module.exports = templateData => {
-//   // destructure page data by section
-//   const { projects, about, ...header } = templateData;
+const generateHtmlTemp = (empArr) => {
 
-const generateHtmlTemp = () => {
-  const { name, id, email, role} = data
+  const empCards = empArr.map(generateRole);
+
   return `
   <!DOCTYPE html>
   <html lang="en">
@@ -115,11 +113,11 @@ const generateHtmlTemp = () => {
       </div>
     </header>
 
+    <div class="card-deck">
 
-${generateCards(name, role, email)}
+    ${empCards.toString().replace(/,/g, '')}
 
-
-
+    </div>
 
     </body>
 
@@ -151,3 +149,5 @@ ${generateCards(name, role, email)}
 }
 
 module.exports = generateHtmlTemp
+// module.exports = generateCards
+// module.exports = generateRoles

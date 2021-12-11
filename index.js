@@ -4,6 +4,7 @@ const inquirer = require('inquirer');
 const { writeFile } = require('./src/writeHTML.js');
 const generateHtmlTemp = require('./src/html-template.js');
 
+
 // Constructors
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
@@ -119,7 +120,8 @@ const teamInfoPrompt = () => {
             console.log('Please enter their name!');
             return false;
           }
-        }
+        },
+        when: (answers) => answers.role !== "Exit"
       },
 
       // ** ID  **
@@ -134,7 +136,8 @@ const teamInfoPrompt = () => {
             console.log('Please enter their ID!');
             return false;
           }
-        }
+        },
+        when: (answers) => answers.role !== "Exit"
       },
 
       // ** eMail **
@@ -149,7 +152,8 @@ const teamInfoPrompt = () => {
             console.log('Please enter their eMail!');
             return false;
           }
-        }
+        },
+        when: (answers) => answers.role !== "Exit"
       },
 
       //** ENGINEER */
@@ -185,29 +189,12 @@ const teamInfoPrompt = () => {
           }
         }
       },
-
-      //** Exit */
-      //  ** Build HTML **
-      // {
-      //   type: 'input',
-      //   name: 'exit',
-      //   message: "Confirming exit? (Required)",
-      //   when: (input) => input.role === 'Exit',
-      //   validate: exitInput => {
-      //     if (exitInput) {
-
-      //       return true;
-      //     } else {
-      //       console.log('Please enter their school!');
-      //       return false;
-      //     }
-      //   }
-      // },
       {
         type: 'confirm',
         name: 'confirmAddTeam',
         message: 'Would you like to enter another Team Member?',
         default: false,
+        when: (answers) => answers.role !== "Exit"
       },
 
 
@@ -223,16 +210,18 @@ const teamInfoPrompt = () => {
         // push Engineer into the array
         empArr.push(engineer);
         console.log(empArr + "Eng");
-      }
-
-      else {
-        (role === 'intern')
+      } else if (role === 'Intern') {
         const intern = new Intern(name, id, email, school);
 
         // push intern into the array
         empArr.push(intern);
         console.log(empArr + "Intern");
 
+      } else {
+        console.log('exit')
+        
+        // Exit
+        return empArr
       }
 
       // determine whether or not new employee is desired
@@ -254,12 +243,12 @@ managerPrompt()
   .then(empArr => {
     console.log(empArr);
 
-    // return generateHtmlTemp(empArr)
+    return generateHtmlTemp(empArr)
   })
-  // .then(HTML => {
-  //   console.log("fromWriteFilthen", HTML)
-  //   return writeFile(HTML)
-  // })
+  .then(HTML => {
+    console.log("fromWriteFilthen", HTML)
+    return writeFile(HTML)
+  })
   .catch(err => {
     console.log(err);
   });
