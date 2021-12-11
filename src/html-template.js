@@ -9,12 +9,15 @@ function generateRole(employee) {
 
       <div class="card-header text-center">
         <h2 class="card-title" id="name">${employee.name}</h2>
+        <div class="icon">
+        <i class="fas fa-mug-hot fa-fw"></i>
         <h3 class="card-subhead" id = "role">Manager</h3>
+        </div>
       </div>
 
       <ul class="list-group list-group-flush card-list">
        <li class="list-group-item team-properties text-left" id="emp-id">ID: ${employee.id}</li>
-       <li class="list-group-item  team-properties" id="email">eMail: ${employee.email}</li>
+       <li class="list-group-item team-properties" id="email">eMail: <a href="mailto:${employee.email}">${employee.email}</a></li>
        <li class="list-group-item  team-properties" id="office">Office: ${employee.office}</li>
       </ul>
 
@@ -31,13 +34,16 @@ function generateRole(employee) {
     
       <div class="card-header text-center">
         <h2 class="card-title" id="name">${employee.name}</h2>
+        <div class="icon">
+        <i class="fas fa-glasses fa-fw"></i>
         <h3 class="card-subhead" id = "role">Engineer</h3>
+        </div>
       </div>
     
       <ul class="list-group list-group-flush card-list">
         <li class="list-group-item team-properties text-left" id="emp-id">ID: ${employee.id}</li>
-        <li class="list-group-item  team-properties" id="email">eMail: ${employee.email}</li>
-        <li class="list-group-item  team-properties" id="gitHub">GitHub:</li>
+        <li class="list-group-item team-properties" id="email">eMail: <a href="mailto:${employee.email}">${employee.email}</a></li>
+        <li class="list-group-item team-properties">GitHub: <a href="https://github.com/${employee.gitHubName}" target="_blank">github.com/${employee.gitHubName}</a></li>
       </ul>
     
     </div>
@@ -51,12 +57,15 @@ function generateRole(employee) {
     
       <div class="card-header text-center">
         <h2 class="card-title" id="name">${employee.name}</h2>
+        <div class="icon">
+        <i class="fas fa-graduation-cap fa-fw"></i>
         <h3 class="card-subhead" id = "role">Intern</h3>
+        </div>
       </div>
     
       <ul class="list-group list-group-flush card-list">
         <li class="list-group-item team-properties text-left" id="emp-id">ID: ${employee.id}</li>
-        <li class="list-group-item  team-properties" id="email">eMail: ${employee.email}</li>
+        <li class="list-group-item team-properties" id="email">eMail: <a href="mailto:${employee.email}">${employee.email}</a></li>
         <li class="list-group-item  team-properties" id="school">School: ${employee.school}</li>
       </ul>
     
@@ -111,7 +120,6 @@ const generateHtmlTemp = (empArr) => {
     </header>
 
     <div class="card-deck">
-
     ${empCards.toString().replace(/,/g, '')}
 
     </div>

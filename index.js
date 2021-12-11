@@ -1,7 +1,8 @@
 const inquirer = require('inquirer');
 
+
 // Required files
-const writeFile = require('./src/writeHTML.js');
+const { writeFile } = require('./src/writeHTML.js');
 const generateHtmlTemp = require('./src/html-template.js');
 
 
@@ -73,7 +74,7 @@ const managerPrompt = () => {
       {
         type: 'input',
         name: 'office',
-        message: "What is the Manager's Office number? (Required)",
+        message: "What is the Manager's Office Number? (Required)",
         validate: officeInput => {
           if (officeInput) {
             return true;
@@ -89,7 +90,6 @@ const managerPrompt = () => {
       const { name, id, email, office } = manData;
       const manager = new Manager(name, id, email, office);
       empArr.push(manager);
-      console.log(empArr);
     })
 };
 //  ********* MANAGER ENDS ************/

@@ -76,24 +76,25 @@ body header div h1 {
   font-size: 3.8em;
 
 }
+/* icon for header */
 body header div i {
 flex: 0;
 margin: 0;
 padding: 0;
-
 }
 
 
 /** Card Styling **/
 .card-deck {
   margin: 1.8em;
+  display: flex;
 }
 
 .card {
-  background-color: var(--fifth-color);
   color: black;
   margin-top: 1em;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+  flex: 0
 }
 
 .card-header{
@@ -110,6 +111,19 @@ padding: 0;
   font-size: 1.5em;
 }
 
+/* for Role names*/
+.icon {
+  display: flex;
+  justify-content: center;
+}
+
+.icon i {
+margin: 0 0.3em 0 0;
+align-self: top;
+font-size: 1.3em;
+}
+
+
 .card-body {
   background-color: var(--second-color); 
   /* background-image: linear-gradient(var(--second-color),  var(--fifth-color)); */
@@ -119,10 +133,10 @@ ul {
   list-style-type: none;
 }
 
-li {
-  background-color: var(--fourth-color);
+.team-properties {
   color: var(--fifth-color);
 }
+
 
 
 
@@ -141,9 +155,9 @@ footer h4 {
   /*** MQ FOR SMALLER/MEDIUM SCREENS  and LARGER TABLETS,  LAPTOPS  DESKTOPS  ***/
   @media screen and (min-width: 576px) {
 
-  body {
+  /* body {
     font-size: 14px;
-    }
+    } */
   
   .body-gradient {
     background: radial-gradient(at bottom right, #d99584, #f8b500);
