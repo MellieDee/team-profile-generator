@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 
 // Required files
-const { writeFile } = require('./src/writeHTML.js');
+const writeFile = require('./src/writeHTML.js');
 const generateHtmlTemp = require('./src/html-template.js');
 
 

@@ -25,20 +25,13 @@ html{
 }
 
 body {
-  /* font-family: 'Open Sans', sans-serif;
-  background-image: url('../images/skyBg.png'); */
-  /* background-position: 100%;
-  background-attachment:fixed; */
   position: relative;
   padding-bottom: 1.5em;
   background-size: cover;
-  /* font-family: 'Roboto', sans-serif; */
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   overflow-x: hidden;
   line-height: 1;
-  /* background-color: #d99584; */
-  /* background-color: black; */
   color: white;
   min-height: 100%;
   width: 100%;
@@ -98,14 +91,14 @@ padding: 0;
 
 .card {
   background-color: var(--fifth-color);
-  color: white;
+  color: black;
   margin-top: 1em;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .card-header{
   background-color: var(--fifth-color);
-  color: white;
+  color: White;
 }
 
 .card-title {
@@ -124,9 +117,12 @@ padding: 0;
 
 ul {
   list-style-type: none;
-
 }
 
+li {
+  background-color: var(--fourth-color);
+  color: var(--fifth-color);
+}
 
 
 

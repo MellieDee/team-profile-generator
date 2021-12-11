@@ -1,9 +1,9 @@
 function generateRole(employee) {
 
   switch (employee.getRole()) {
+  
     case 'Manager':
       return `
-
   <div class="card m-1">
     <div class="card-block">
 
@@ -24,9 +24,8 @@ function generateRole(employee) {
 
 
     case 'Engineer':
-      let gitHubLink = 'https://github.com/${employee.githubName.replace(/ /g, "")}'
+   
       return `
-
   <div class="card m-1">
     <div class="card-block">
     
@@ -38,7 +37,7 @@ function generateRole(employee) {
       <ul class="list-group list-group-flush card-list">
         <li class="list-group-item team-properties text-left" id="emp-id">ID: ${employee.id}</li>
         <li class="list-group-item  team-properties" id="email">eMail: ${employee.email}</li>
-        <li class="list-group-item  team-properties" id="gitHub">GitHub:<a href="https://github.com/${employee.githubName.replace(/ /g, "")}" class="card-link">${employee.gitHubName}</a></li>
+        <li class="list-group-item  team-properties" id="gitHub">GitHub:</li>
       </ul>
     
     </div>
@@ -47,7 +46,6 @@ function generateRole(employee) {
 
     case 'Intern':
        return `
-
   <div class="card m-1">
     <div class="card-block">
     
@@ -71,7 +69,6 @@ function generateRole(employee) {
 const generateHtmlTemp = (empArr) => {
 
   const empCards = empArr.map(generateRole);
-
   return `
   <!DOCTYPE html>
   <html lang="en">
@@ -149,5 +146,14 @@ const generateHtmlTemp = (empArr) => {
 }
 
 module.exports = generateHtmlTemp
-// module.exports = generateCards
-// module.exports = generateRoles
+
+
+
+
+// function generateGitLink(employee) {
+
+//   const gitHubLink = `https://github.com/(${employee.gitHubName}).replace(/ /g, '')`
+
+//   return gitHubLink
+// };
+// generateGitLink
