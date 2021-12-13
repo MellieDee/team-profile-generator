@@ -7,7 +7,7 @@
 
 ## **Project Description**
 ***
-To generate a webpage that displays a team's basic profile and contact data.
+This command line app quickly generates an HTML file which when opened in a browser displays a simple, but informative Company Team Profile Page. Upon start of the app, the user answers questions from the Inquirer commandline prompts.</br>Each answer is collected, processed then applied to the appropriate line in a HTML file.</br>Team Profile Generator frees up time for busy managers or HR departments and ensures basic employee data is easily recorded and managed. 
 
 &nbsp;
 
@@ -29,7 +29,7 @@ To generate a webpage that displays a team's basic profile and contact data.
 
 ## **Installation**
 ***
-Ensure you have Node installed.</br>Fork the repo.</br>Clone to local directory.</br>Install npm package: from command line, in the main program directory, type: npm install.</br>Program runs from the index.js file: from command line, in the main program directory, type: node index. (Also uses inquirer and node fs dependencies which are called in the code.)
+Ensure you have Node installed.</br>Fork the repo.</br>Clone to local directory.</br>Install npm package: from command line, in the main program directory, type: npm install.</br>Program runs from the index.js file: from command line, in the main program directory, type: node index. (Also uses inquirer, node fs and jest dependencies which are called in the code. If don't already have Jest, will need to add that, too.)
 
 &nbsp;
 
@@ -44,6 +44,9 @@ Answer the questions when prompted.</br>Hints:</br>Do not start any answer with 
 ## **URL**
 ***
 Does not have a deployment URL.
+[Team Profile Generator run through on  YouTube](https://youtu.be/fbokePciccE)
+
+&nbsp;
 
 &nbsp;
 
@@ -51,9 +54,22 @@ Does not have a deployment URL.
 ## **Screenshot**
 ***
 
-<img src="../assets/images/screenShot.png" width="375" height="375" alt="Team Profile Generator command line prompts">
+<img src="./assets/images/screenShot1.png" width="375" height="375" alt="Team Profile Generator command line passed tests">
 
 &nbsp;
+
+<img src="./assets/images/screenShot2.png" width="375" height="375" alt="Team Profile Generator command line prompts">
+
+&nbsp;
+
+<img src="./assets/images/screenShot3.png" width="375" height="400" alt="Team Profile Generator HTML open in browser Desktop">
+
+&nbsp;
+
+<img src="./assets/images/screenShot4.png" width="200" height="375" alt="Team Profile Generator command line prompts">
+
+&nbsp;
+
 
 
 
@@ -83,6 +99,8 @@ https://css-tricks.com/radial-gradient-recipes/
 https://developers.google.com/fonts/docs/material_icons apache
 
 https://www.geeksforgeeks.org/how-to-place-two-bootstrap-cards-next-to-each-other/
+
+Styles I researched and made a swipe of: Team-Profile-Style-Swipe image in assets
 
 
 #### Coding

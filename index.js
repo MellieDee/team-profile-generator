@@ -243,7 +243,7 @@ const teamInfoPrompt = () => {
       if (teamData.confirmAddTeam) {
         return teamInfoPrompt(teamData);
       } else {
-        console.log(empArr)
+        // console.log(empArr)
         return empArr
       }
     });
@@ -256,7 +256,7 @@ const teamInfoPrompt = () => {
 managerPrompt()
   .then(teamInfoPrompt)
   .then(empArr => {
-    console.log(empArr);
+    // console.log(empArr);
 
     return generateHtmlTemp(empArr)
   })
@@ -275,89 +275,3 @@ managerPrompt()
 
 
 
-
-
-
-// ** Running the app
-// teamInfoPrompt()
-//   .then(data => {
-//     console.log(data);
-
-//     return generateHtmlTemp(data)
-//   })
-//   .then(HTML => {
-//     console.log("fromWriteFilthen", HTML)
-//     return writeFile(HTML)
-//   })
-//   .catch(err => {
-//     console.log(err);
-//   });
-
-
-//userInfoPrompt()
-//   .then(promptProject)
-//   .then(portfolioData => {
-//     return generatePage(portfolioData)
-//   })
-//   .then(pageHTML => {
-//     return writeFile(pageHTML)
-//   })
-//   .then(writeFileResponse => {
-//     console.log(writeFileResponse)
-//     return copyFile();
-//   })
-//   .then(copyFileResponse => {
-//     console.log(copyFileResponse)
-//   })
-// .catch (err => {
-//   console.log(err);
-// });
-
-//   ****   POSSIBLE USE LATER ******
-// {
-//   type: 'confirm',
-//   name: 'confirmAddMan',
-//   message: 'Would you like to enter another manager?',
-//   default: false
-// }
-// const addTeamQuestion = () => {
-//   return inquirer
-//     .prompt([
-//       {
-//       type: 'confirm',
-//       name: 'confirmAddTeam',
-//       message: 'Would you like to enter a Team Member?',
-//       default: true
-//       }
-//     ])
-//     .then
-// }
-// addTeamQuestion()
-
-
-      // //** NOT NOW */
-      // if (manData.confirmAddMan) {
-      //   return managerPrompt(manData);
-      // } else {
-      //   console.log(teamArr)
-      //   return teamArr
-      // }
-      // //  ** NOT NOW **
-      // {
-      //   type: 'input',
-      //   name: 'notNow',
-      //   message: "Ok; your HTML is generated!",
-      //   when: (typeInput) = ('Not Now'),
-      //   validate: Input => {
-      //     if (gitHubNameInput) {
-      //       return true;
-      //     } else {
-      //       console.log('Please enter their GitHub username!');
-      //       return false;
-      //     }
-      //   }
-      // },
-
-      // .then(data => {
-      //   return data;
-      // })
