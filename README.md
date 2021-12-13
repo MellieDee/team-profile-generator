@@ -36,7 +36,7 @@ Ensure you have Node installed.</br>Fork the repo.</br>Clone to local directory.
 
 ## **Usage**
 ***
-Answer the questions when prompted.</br>Hints:</br>Do not start any answer with the space bar (Profile will generate, but not correctly formatted.)</br>If the screenshot doesn't show, check your relative path, or try changing the number of '.' at the start. At this time, only one image can be added through the prompts; if you have more they are easy to add manually in the generated the README.md file.</br>
+Answer the questions when prompted.</br>Hints:</br>Do not start any answer with the space bar (Profile will generate, but not correctly formatted.)</br>Your HTML file will appear in the dist directory.
 
 &nbsp;
 
@@ -67,12 +67,13 @@ Not accepting contributors.
 
 ### **Tests**
 ***
-No tests at this time.
+See the tests file for test used to create the app. nothing more than that at this time.
 
 &nbsp;
 
 ### **Resources**
 ***
+
 
 #### Styling
 https://hookagency.com/blog/website-color-schemes/

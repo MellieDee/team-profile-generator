@@ -1,11 +1,7 @@
 :root {
- --first-color: #b54741;
-  --second-color: #3b69b3; 
-  --third-color: #992f36; 
-  --fourth-color:#9a67b5; 
-  --fifth-color: #0a1761; 
-  --sixth-color: #f8b500;
-  --seventh-color: #fceabb;
+  --med-blue: #1a4da1; 
+  --lite-blue:#68a4f2; 
+  --dark-blue: #0a1761; 
 
 }
 
@@ -38,7 +34,7 @@ body {
 }
 
 .body-gradient {
-  background: linear-gradient(to left, #d99584, var(--sixth-color)) ;
+  background: linear-gradient(to top, black, #1c4cad) ;
 }
 
 
@@ -48,10 +44,6 @@ header {
   font-family: 'Oswald', sans-serif;
   color: white;
   z-index: 9999;
-  /* background-image: linear-gradient(#962129, #e8bd5f); */
-  /* position: -webkit-sticky;
-  position: sticky;
-  top: 0; */
   margin: 0;
   width: 100%;
   position: relative;
@@ -84,21 +76,21 @@ padding: 0;
 }
 
 
-/** Card Styling **/
+/******** Card Styling *******/
 .card-deck {
   margin: 1.8em;
   display: flex;
 }
 
 .card {
-  color: black;
+  color: white;
   margin-top: 1em;
-  box-shadow: 0 10px 10px rgba(0,0,0,0.5);
-  flex: 0
+  box-shadow: 0 10px 10px rgba(72, 44, 133,0.5);
+  flex: 0;
+  background-color: black;
 }
 
 .card-header{
-  background-color: var(--fifth-color);
   color: White;
 }
 
@@ -125,24 +117,42 @@ font-size: 1.3em;
 
 
 .card-body {
-  background-color: var(--second-color); 
-  /* background-image: linear-gradient(var(--second-color),  var(--fifth-color)); */
+  background-color: var(--med-blue); 
+  /* background-image: linear-gradient(var(--med-blue),  var(--dark-blue-color)); */
 }
 
 ul {
   list-style-type: none;
+  color: white;
 }
 
-.team-properties {
-  color: var(--fifth-color);
+.team-properties a  {
+  color: white;
+  text-decoration: underline;
+
+}
+
+.team-properties  {
+  color: white;
+}
+
+.drk-blue {
+  background-color: var(--dark-blue)
+}
+
+.med-blue {
+  background-color: var(--med-blue)
+}
+
+.lite-blue {
+  background-color: var(--lite-blue)
 }
 
 
 
-
-
+/**  FOOTER STYLING  **/
 footer {
-  background: linear-gradient(black, var(--fifth-color));
+  background: linear-gradient(black, var(--dark-blue));
   position: absolute;
   left: 0; right: 0; bottom: 0;
 }
@@ -155,13 +165,6 @@ footer h4 {
   /*** MQ FOR SMALLER/MEDIUM SCREENS  and LARGER TABLETS,  LAPTOPS  DESKTOPS  ***/
   @media screen and (min-width: 576px) {
 
-  /* body {
-    font-size: 14px;
-    } */
-  
-  .body-gradient {
-    background: radial-gradient(at bottom right, #d99584, #f8b500);
-  }
 
   .card-title {
     font-weight: bold;
@@ -174,12 +177,6 @@ footer h4 {
 
   }
 
-  /*   Media Queries medium screens & tablets */
- /* @media screen and (min-width: 768px) {
-  body {
-    font-size: 18px;
-  }
-} */
 
 
 

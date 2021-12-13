@@ -7,7 +7,7 @@ function generateRole(employee) {
   <div class="card m-1">
     <div class="card-block">
 
-      <div class="card-header text-center">
+      <div class="card-header drk-blue text-center">
         <h2 class="card-title" id="name">${employee.name}</h2>
         <div class="icon">
         <i class="fas fa-mug-hot fa-fw"></i>
@@ -15,10 +15,10 @@ function generateRole(employee) {
         </div>
       </div>
 
-      <ul class="list-group list-group-flush card-list">
-       <li class="list-group-item team-properties text-left" id="emp-id">ID: ${employee.id}</li>
-       <li class="list-group-item team-properties" id="email">eMail: <a href="mailto:${employee.email}">${employee.email}</a></li>
-       <li class="list-group-item  team-properties" id="office">Office: ${employee.office}</li>
+      <ul class="list-group drk-bluelist-group-flush card-list">
+       <li class="list-group-item drk-blue team-properties text-left" id="emp-id">ID: ${employee.id}</li>
+       <li class="list-group-item drk-blue team-properties" id="email">eMail: <a href="mailto:${employee.email}">${employee.email}</a></li>
+       <li class="list-group-item  drk-blue team-properties" id="office">Office: ${employee.office}</li>
       </ul>
 
   </div>
@@ -32,7 +32,7 @@ function generateRole(employee) {
   <div class="card m-1">
     <div class="card-block">
     
-      <div class="card-header text-center">
+      <div class="card-header med-blue text-center">
         <h2 class="card-title" id="name">${employee.name}</h2>
         <div class="icon">
         <i class="fas fa-glasses fa-fw"></i>
@@ -40,10 +40,10 @@ function generateRole(employee) {
         </div>
       </div>
     
-      <ul class="list-group list-group-flush card-list">
-        <li class="list-group-item team-properties text-left" id="emp-id">ID: ${employee.id}</li>
-        <li class="list-group-item team-properties" id="email">eMail: <a href="mailto:${employee.email}">${employee.email}</a></li>
-        <li class="list-group-item team-properties">GitHub: <a href="https://github.com/${employee.gitHubName}" target="_blank">github.com/${employee.gitHubName}</a></li>
+      <ul class="list-group med-blue list-group-flush card-list">
+        <li class="list-group-item med-blue team-properties text-left" id="emp-id">ID: ${employee.id}</li>
+        <li class="list-group-item med-blue team-properties" id="email">eMail: <a href="mailto:${employee.email}">${employee.email}</a></li>
+        <li class="list-group-item med-blue team-properties">GitHub: <a href="https://github.com/${employee.gitHubName}" target="_blank">github.com/${employee.gitHubName}</a></li>
       </ul>
     
     </div>
@@ -52,10 +52,10 @@ function generateRole(employee) {
 
     case 'Intern':
        return `
-  <div class="card m-1">
+  <div class="card lite-blue m-1">
     <div class="card-block">
     
-      <div class="card-header text-center">
+      <div class="card-header lite-blue text-center">
         <h2 class="card-title" id="name">${employee.name}</h2>
         <div class="icon">
         <i class="fas fa-graduation-cap fa-fw"></i>
@@ -63,10 +63,10 @@ function generateRole(employee) {
         </div>
       </div>
     
-      <ul class="list-group list-group-flush card-list">
-        <li class="list-group-item team-properties text-left" id="emp-id">ID: ${employee.id}</li>
-        <li class="list-group-item team-properties" id="email">eMail: <a href="mailto:${employee.email}">${employee.email}</a></li>
-        <li class="list-group-item  team-properties" id="school">School: ${employee.school}</li>
+      <ul class="list-group  lite-bluelist-group-flush card-list">
+        <li class="list-group-item lite-blue team-properties text-left" id="emp-id">ID: ${employee.id}</li>
+        <li class="list-group-item  lite-blue team-properties" id="email">eMail: <a href="mailto:${employee.email}">${employee.email}</a></li>
+        <li class="list-group-item lite-blue team-properties" id="school">School: ${employee.school}</li>
       </ul>
     
     </div>
