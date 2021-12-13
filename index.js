@@ -23,6 +23,13 @@ empArr = []
 
 //  ********* MANAGER ************/
 const managerPrompt = () => {
+
+  console.log(`
+
+  ============= Add a Manager   =============
+
+  `);
+
   return inquirer
     .prompt([
       // ** Manager Name **
@@ -99,6 +106,13 @@ const managerPrompt = () => {
 
 //  ********* NEXT TEAM MEMBERS  ***********
 const teamInfoPrompt = () => {
+
+  console.log(`
+
+  ============= Add a Different Team Member   =============
+
+  `);
+  
   return inquirer
     .prompt([
       {
