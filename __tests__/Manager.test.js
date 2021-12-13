@@ -15,7 +15,7 @@ expect(man.name).toBe(name);
 });
 
 test("Set office via constructor arguments", () => {
-const office = "Office 222";
+const office = this.office;
 const man = new Manager(office);
 expect(man.office).toBe(office);
 console.log(office)
