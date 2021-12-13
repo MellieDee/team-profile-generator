@@ -10,6 +10,7 @@ const generateHtmlTemp = require('./src/html-template.js');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
+const { TestWatcher } = require('jest');
 
 // create an array for each employee type and the base for inquirer questions
 // run inquirer prompt for basic employee questions
